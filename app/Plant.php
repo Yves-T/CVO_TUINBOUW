@@ -45,4 +45,9 @@ class Plant extends Model
     {
         return $this->hasMany(PlantRecipe::class);
     }
+
+    public function flowerArrangements()
+    {
+        return $this->hasMany(FlowerArrangements::class);
+    }
 }
