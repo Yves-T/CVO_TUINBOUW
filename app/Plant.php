@@ -30,4 +30,9 @@ class Plant extends Model
     {
         return $this->hasOne(PlantHarvest::class);
     }
+
+    public function plantCultivars()
+    {
+        return $this->hasOne(PlantCultivars::class);
+    }
 }
