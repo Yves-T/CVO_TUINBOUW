@@ -10,6 +10,6 @@ class PlantMedicalContent extends Model
 
     public function medical()
     {
-        return $this->belongsTo(PlantCultivars::class);
+        return $this->belongsTo(PlantMedical::class);
     }
 }
