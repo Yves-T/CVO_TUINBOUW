@@ -12,4 +12,9 @@ class PlantRecipe extends Model
     {
         return $this->belongsTo(Plant::class);
     }
+
+    public function ingredients()
+    {
+        return $this->hasMany(PlantRecipeIngredients::class, "plant_recipe_id");
+    }
 }
