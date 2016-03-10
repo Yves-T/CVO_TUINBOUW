@@ -40,4 +40,9 @@ class Plant extends Model
     {
         return $this->hasOne(PlantMedical::class);
     }
+
+    public function plantRecipes()
+    {
+        return $this->hasMany(PlantRecipe::class);
+    }
 }
