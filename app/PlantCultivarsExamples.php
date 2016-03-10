@@ -11,6 +11,6 @@ class PlantCultivarsExamples extends Model
 
     public function cultivar()
     {
-        return $this->belongsTo(PlantCultivars::class);
+        return $this->belongsTo(PlantCultivars::class,"plant_cultivars_id");
     }
 }
