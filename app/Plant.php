@@ -35,4 +35,9 @@ class Plant extends Model
     {
         return $this->hasOne(PlantCultivars::class);
     }
+
+    public function plantMedical()
+    {
+        return $this->hasOne(PlantMedical::class);
+    }
 }
