@@ -7,7 +7,7 @@
         .controller('HeaderController', HeaderController);
 
 
-    function HeaderController($auth, $state, $http, $rootScope, Data, $location, Auth) {
+    function HeaderController($state, $location, Auth) {
 
         var vm = this;
 
