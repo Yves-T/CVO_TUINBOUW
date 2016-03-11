@@ -10,6 +10,7 @@ JWT. Communication is done with REST
 #### Get plants
 
 url = api/plant
+method = GET
 
 Example response
 
