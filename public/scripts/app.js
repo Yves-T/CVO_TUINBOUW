@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('tuinbouwApp', ['ui.router', 'satellizer'])
+        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination'])
         .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
             function redirectWhenLoggedOut($q, $injector) {
@@ -46,9 +46,9 @@
                     controller: 'AuthController as auth'
                 })
                 .state('users', {
-                    url: '/users',
-                    templateUrl: '../views/userView.html',
-                    controller: 'UserController as user'
+                    url: '/plantList',
+                    templateUrl: '../views/plantListView.html',
+                    controller: 'PlantListController as plantList'
                 });
         });
 })();

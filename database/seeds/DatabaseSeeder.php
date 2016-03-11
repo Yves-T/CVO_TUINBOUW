@@ -8,6 +8,7 @@ use App\PlantCultivars;
 use App\PlantCultivarsExamples;
 use App\PlantHarvest;
 use App\PlantHistory;
+use App\PlantInformation;
 use App\PlantMaintenance;
 use App\PlantMedical;
 use App\PlantMedicalContent;
@@ -41,6 +42,12 @@ class DatabaseSeeder extends Seeder
         }
 
         $plant = Plant::create(array());
+
+        $plantInfo = PlantInformation::create(array(
+            'title' => "Lavandula angustifolia - Lavendel",
+            'info' => "Echte lavendel of smalbladige lavendel (Lavandula angustifolia) is een plant uit de lipbloemenfamilie (Lamiaceae). Deze fantastische tuinplant is perfect te gebruiken als solitaire struik, lage haagplant of bodembedekker (in blokbeplanting). Ook terraspotten en plantenbakken fleuren op met deze dankbare plant. Lavendel dankt zijn populariteit aan zijn lange bloeiperiode (2 maand of langer, afhankelijk van de cultivar) en zijn intense geur. Een ander pluspunt is zeker ook het grijsgroene blad dat trouwens ook in de winter aan de plant blijft. Het is een lage, sterk vertakte struik die bekend is vanwege de aromatische olie die gebruikt wordt in parfums. Echte lavendel is oorspronkelijk afkomstig uit Zuid-Europa, waar de plant groeit op droge, rotsige, kalkrijke hellingen. Tegenwoordig is lavendel in grote delen van Europa een populaire tuinplant. De hoogte is circa 75 cm.",
+            'plant_id' => $plant->id
+        ));
 
         $recipe = PlantRecipe::create(array(
             'name' => "Met lavendel geparfumeerde aubergines",
