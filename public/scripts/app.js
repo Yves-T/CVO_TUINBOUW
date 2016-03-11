@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination','angular-jwt'])
+        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination'])
         .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
             function redirectWhenLoggedOut($q, $injector) {
