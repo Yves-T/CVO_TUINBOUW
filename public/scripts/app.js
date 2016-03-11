@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination'])
+        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination','angular-jwt'])
         .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
             function redirectWhenLoggedOut($q, $injector) {
@@ -30,11 +30,29 @@
                     }
                 }
             }
-            
+
+            function persistNewToken($q, $injector) {
+                return {
+                    response: function (response) {
+                        var auth = $injector.get('$auth');
+                        if (response.headers('Authorization')) {
+                            // console.log(response.headers('Authorization'));
+                            // console.log(response.headers('Authorization').split(' '));
+                            var token = response.headers('Authorization').split(' ')[1];
+                            auth.setToken(token);
+                        }
+
+                        return response;
+                    }
+                }
+            }
+
             $provide.factory('redirectWhenLoggedOut', redirectWhenLoggedOut);
-            
+            $provide.factory('persistNewToken', persistNewToken);
+
             $httpProvider.interceptors.push('redirectWhenLoggedOut');
-            
+            $httpProvider.interceptors.push('persistNewToken');
+
             $authProvider.loginUrl = '/api/authenticate';
             
             $urlRouterProvider.otherwise('/auth');
