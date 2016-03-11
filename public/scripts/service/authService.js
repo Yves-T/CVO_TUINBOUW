@@ -22,10 +22,16 @@ angular
             }));
         };
 
+        var currentUserName = function () {
+            var user = JSON.parse(localStorage.getItem('user'));
+            return user.name;
+        };
+
         return {
             isAuthenticated: isAuthenticated,
             clearAuthenticated: clearAuthenticated,
-            logout: logOut
+            logout: logOut,
+            currentUserName: currentUserName
         };
 
     }]);

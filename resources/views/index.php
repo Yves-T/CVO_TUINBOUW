@@ -13,7 +13,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Tuinbouw</a>
         </div>
-        <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser.name}}</p>
+        <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser}}</p>
         <ul class="nav navbar-nav">
             <li ng-class="{ active: hc.isActive('/plantList')}"><a href="/planten">Planten</a></li>
             <li ng-show="currentUser" ng-click="hc.logout()"><a href="#">Uitloggen</a></li>
