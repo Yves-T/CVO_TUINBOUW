@@ -33,7 +33,7 @@
 
                     $rootScope.currentUser = response.user;
 
-                    $state.go('users');
+                    $state.go('plantList');
                 }, function (err) {
                     console.log("Error when trying to get authenticated user: " + err);
                 });

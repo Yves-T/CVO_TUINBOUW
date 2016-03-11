@@ -63,10 +63,32 @@
                     templateUrl: '../views/authView.html',
                     controller: 'AuthController as auth'
                 })
-                .state('users', {
+                .state('plantList', {
                     url: '/plantList',
                     templateUrl: '../views/plantListView.html',
                     controller: 'PlantListController as plantList'
                 });
+        })
+        .run(function ($rootScope, $state, $auth, $http) {
+
+
+            $rootScope.$on('$stateChangeStart', function (event, toState) {
+                var user = JSON.parse(localStorage.getItem('user'));
+
+                if (user) {
+
+                    $rootScope.authenticated = true;
+
+                    $rootScope.currentUser = user;
+
+                    if (toState.name === "auth") {
+
+                        event.preventDefault();
+
+                        $state.go('plantList');
+                    }
+                }
+
+            });
         });
 })();
