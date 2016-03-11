@@ -15,7 +15,7 @@
         <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser.name}}</p>
         <ul class="nav navbar-nav">
             <li ng-class="{ active: hc.isActive('/users')}"><a href="/planten">Planten</a></li>
-            <li ng-class="{ active: hc.isActive('/logout')}"><a href="/logout">uitloggen</a></li>
+            <li ng-show="currentUser" ng-class="{ active: hc.isActive('/logout')}"><a href="/logout">uitloggen</a></li>
         </ul>
     </div>
 </nav>
