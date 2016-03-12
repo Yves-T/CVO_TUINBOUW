@@ -1,0 +1,95 @@
+<!-- form-plantCategory.html -->
+<h3>Kenmerken</h3>
+<div class="form-group">
+    <label for="catTitle">Plantensoort</label>
+    <input required novalidate type="text" class="form-control" id="catTitle" name="catTitle"
+           ng-model="vm.formData.catTitle">
+</div>
+
+<div class="form-group">
+    <label>Gebruik</label>
+    <input required novalidate type="text" class="form-control" id="catGebruik" name="catGebruik"
+           ng-model="vm.formData.catGebruik">
+</div>
+
+<div class="form-group">
+    <label>Habitat</label>
+    <input required novalidate type="text" class="form-control" id="catHabitat" name="catHabitat"
+           ng-model="vm.formData.catHabitat">
+</div>
+
+<div class="form-group">
+    <label>Hoogte</label>
+    <input required novalidate type="text" class="form-control" id="catHeight" name="catHeight"
+           ng-model="vm.formData.catHeight">
+</div>
+
+<h3>Bijzondere kenmerken</h3>
+<div class="form-group">
+    <label for="catFlowerColor">Bloemkleur</label>
+    <input type="text" class="form-control" id="catFlowerColor" name="catFlowerColor"
+           ng-model="vm.formData.catFlowerColor">
+</div>
+
+<div class="form-group">
+    <label for="catBlloomTime">Bloemperiode</label>
+    <input type="text" class="form-control" id="catBlloomTime" name="catBlloomTime"
+           ng-model="vm.formData.catBlloomTime">
+</div>
+
+<div class="form-group">
+    <label for="catBlloomTime">Bloemen</label>
+    <input type="text" class="form-control" id="catFlowers" name="catFlowers" ng-model="vm.formData.catFlowers">
+</div>
+
+<div class="form-group">
+    <label for="catLeafColors">Bladkleur</label>
+    <input type="text" class="form-control" id="catLeafColors" name="catLeafColors"
+           ng-model="vm.formData.catLeafColors">
+</div>
+
+<div class="form-group">
+    <label for="catLeafs">Bladeren</label>
+    <input type="text" class="form-control" id="catLeafs" name="catLeafs" ng-model="vm.formData.catLeafs">
+</div>
+
+<div class="form-group">
+    <label for="catLeafDetail">Bladhoudend / verliezend</label>
+    <input type="text" class="form-control" id="catLeafDetail" name="catLeafDetail"
+           ng-model="vm.formData.catLeafDetail">
+</div>
+
+<h3>Standplaats en vereisten</h3>
+<div class="form-group">
+    <label for="catLeafShadow">Schaduw</label>
+    <input type="text" class="form-control" id="catLeafShadow" name="catLeafShadow"
+           ng-model="vm.formData.catLeafShadow">
+</div>
+
+<div class="form-group">
+    <label for="catHumidity">Vochtigheid</label>
+    <input type="text" class="form-control" id="catHumidity" name="catHumidity" ng-model="vm.formData.catHumidity">
+</div>
+
+<div class="form-group">
+    <label for="catPh">Zuurtegraad</label>
+    <input type="text" class="form-control" id="catPh" name="catPh" ng-model="vm.formData.catPh">
+</div>
+
+<div class="form-group">
+    <label for="catEvergreen">Winterhard</label>
+    <input type="text" class="form-control" id="catEvergreen" name="catEvergreen" ng-model="vm.formData.catEvergreen">
+</div>
+
+<div class="form-group">
+    <label for="catDensity">Plantdichtheid</label>
+    <input type="text" class="form-control" id="catDensity" name="catDensity" ng-model="vm.formData.catDensity">
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="form.interests" class="btn btn-block btn-info" ng-disabled="plantForm.$invalid">
+            Cultivars <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

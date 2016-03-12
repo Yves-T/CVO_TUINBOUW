@@ -1,0 +1,31 @@
+<!-- form-plantInfo.html -->
+<div class="form-group">
+    <label for="infoTitle">Plant info titel</label>
+    <input required type="text" class="form-control" id="infoTitle" name="infoTitle"
+           ng-model="vm.formData.infoTitle">
+</div>
+
+<div class="form-group">
+    <label>Plant informatie</label>
+    <div text-angular ng-model="vm.formData.infoPlant" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="infoFamily">Familie</label>
+    <input required type="text" class="form-control" id="infoFamily" name="infoFamily" ng-model="vm.formData.infoFamily">
+</div>
+
+<div class="form-group">
+    <label for="infoGenus">Geslacht</label>
+    <input required type="text" class="form-control" id="infoGenus" name="infoGenus" ng-model="vm.formData.infoGenus">
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="form.plantCategory" class="btn btn-block btn-info" ng-disabled="plantForm.$invalid">
+            categorie&euml;n <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

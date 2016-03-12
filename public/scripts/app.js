@@ -9,7 +9,8 @@
             'angularUtils.directives.dirPagination',
             'monospaced.qrcode',
             'angular-loading-bar',
-            'ngAnimate'
+            'ngAnimate',
+            'textAngular'
         ])
         .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
@@ -78,7 +79,21 @@
                     templateUrl: '../views/qrCodeView.html',
                     controller: 'QrCodeController as qr',
                     params: {plantId: null}
+                })
+                .state('form', {
+                    url: '/form',
+                    templateUrl: '../views/form.html',
+                    controller: 'FormController as vm'
+                })
+                .state('form.plantInfo', {
+                    url: '/plantInfo',
+                    templateUrl: '../views/form_plantInfo.html'
+                })
+                .state('form.plantCategory', {
+                    url: '/plantCategory',
+                    templateUrl: '../views/form_plantCategory.html'
                 });
+
         })
         .run(function ($rootScope, $state, $auth, $http) {
 

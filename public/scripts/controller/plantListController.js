@@ -42,6 +42,10 @@
             $state.go('qrCode', {"plantId": plantId});
         };
 
+        vm.addPlant = function () {
+            $state.go('form.plantInfo', {});
+        };
+
         vm.deletePlant = function (plantId) {
             Data.deletePlant(plantId, function (plantId) {
                 console.log(plantId);
