@@ -21,5 +21,9 @@
             });
         };
 
+        vm.goto = function (state) {
+            $state.go(state, {});
+        };
+
     }
 })();

@@ -15,7 +15,9 @@
         </div>
         <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser}}</p>
         <ul class="nav navbar-nav">
-            <li ng-class="{ active: hc.isActive('/plantList')}"><a href="/planten">Planten</a></li>
+            <li ng-show="currentUser" ng-class="{ active: hc.isActive('/plantList')}">
+                <a href="javascript:;" ng-click="hc.goto('plantList')">Planten</a>
+            </li>
             <li ng-show="currentUser" ng-click="hc.logout()"><a href="#">Uitloggen</a></li>
         </ul>
     </div>
