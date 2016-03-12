@@ -92,7 +92,8 @@
                 })
                 .state('form.plantCategory', {
                     url: '/plantCategory',
-                    templateUrl: '../views/form_plantCategory.html'
+                    templateUrl: '../views/form_plantCategory.html',
+                    controller: 'PlantCategoryController as pv'
                 })
                 .state('form.plantCultivars', {
                     url: '/plantCultivars',
