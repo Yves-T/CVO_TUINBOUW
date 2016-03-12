@@ -24,7 +24,7 @@ angular
 
         var currentUserName = function () {
             var user = JSON.parse(localStorage.getItem('user'));
-            return user.name;
+            return user.name || user;
         };
 
         return {
