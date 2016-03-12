@@ -5,6 +5,7 @@
     <title>Angular-Laravel Authentication</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='node_modules/angular-loading-bar/build/loading-bar.min.css' />
 </head>
 <body ng-app="tuinbouwApp">
 
@@ -32,6 +33,9 @@
 <!-- Application Dependencies -->
 <script src="node_modules/lodash/lodash.min.js"></script>
 <script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="node_modules/satellizer/satellizer.js"></script>
 <script src="node_modules/angular-utils-pagination/dirPagination.js"></script>
