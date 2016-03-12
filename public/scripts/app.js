@@ -88,7 +88,8 @@
                 })
                 .state('form.plantInfo', {
                     url: '/plantInfo',
-                    templateUrl: '../views/form_plantInfo.html'
+                    templateUrl: '../views/form_plantInfo.html',
+                    controller: 'PlantInfoController as pi'
                 })
                 .state('form.plantCategory', {
                     url: '/plantCategory',
