@@ -16,7 +16,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Tuinbouw</a>
         </div>
-        <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser}}</p>
+        <p class="navbar-text" ng-show="currentUser">Welcome, {{currentUser.name}}</p>
         <ul class="nav navbar-nav">
             <li ng-show="currentUser" ng-class="{ active: hc.isActive('/plantList')}">
                 <a href="javascript:;" ng-click="hc.goto('plantList')">Planten</a>
