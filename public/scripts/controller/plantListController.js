@@ -36,6 +36,18 @@
 
         vm.showQrCode = function (plantId) {
             $state.go('qrCode', {"plantId": plantId});
+        };
+
+        vm.deletePlant = function (plantId) {
+            Data.deletePlant(plantId, function (plantId) {
+                console.log(plantId);
+                var plantIdAsInt = parseInt(plantId);
+                _.remove(vm.plants, function (currentPlant) {
+                    return currentPlant.id === parseInt(plantIdAsInt);
+                });
+            }, function (error) {
+                console.log(error);
+            });
         }
 
     }

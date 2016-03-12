@@ -30,6 +30,7 @@
 </body>
 
 <!-- Application Dependencies -->
+<script src="node_modules/lodash/lodash.min.js"></script>
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="node_modules/satellizer/satellizer.js"></script>
@@ -46,4 +47,5 @@
 <script src="scripts/controller/qrCodeController.js"></script>
 <script src="scripts/service/authService.js"></script>
 <script src="scripts/service/dataService.js"></script>
+<script src="scripts/directives/confirmDirective.js"></script>
 </html>
