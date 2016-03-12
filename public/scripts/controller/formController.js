@@ -31,5 +31,9 @@
                 console.log(error);
             });
         };
+
+        vm.isStateActive = function(someState) {
+            return ($state.current.name.localeCompare(someState) == 0) ? 'active' : '';
+        };
     }
 })();
