@@ -34,12 +34,6 @@
         vm.users;
         vm.error;
 
-        vm.logout = function () {
-            Auth.logout(function () {
-                $state.go('auth', {});
-            });
-        };
-
         vm.showQrCode = function (plantId) {
             $state.go('qrCode', {"plantId": plantId});
         }
