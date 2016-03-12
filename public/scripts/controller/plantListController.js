@@ -34,6 +34,10 @@
         vm.users;
         vm.error;
 
+        vm.showTable = function () {
+            return vm.plants.length !== 0;
+        };
+
         vm.showQrCode = function (plantId) {
             $state.go('qrCode', {"plantId": plantId});
         };
