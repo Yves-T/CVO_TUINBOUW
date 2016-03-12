@@ -36,8 +36,6 @@
                     response: function (response) {
                         var auth = $injector.get('$auth');
                         if (response.headers('Authorization')) {
-                            // console.log(response.headers('Authorization'));
-                            // console.log(response.headers('Authorization').split(' '));
                             var token = response.headers('Authorization').split(' ')[1];
                             auth.setToken(token);
                         }
