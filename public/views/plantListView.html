@@ -32,7 +32,7 @@
         <tr dir-paginate="plant in plantList.plants|orderBy:plantList.sortKey:plantList.reverse|filter:plantList.search
         | itemsPerPage:5">
             <td>{{plant.id}}</td>
-            <td>{{plant.plant_information.title}}</td>
+            <td><a href="javascript:;" ng-click="plantList.showQrCode(plant.id)">{{plant.plant_information.title}}</a></td>
         </tr>
         </tbody>
     </table>

@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination'])
+        .module('tuinbouwApp', ['ui.router', 'satellizer', 'angularUtils.directives.dirPagination', 'monospaced.qrcode'])
         .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
             function redirectWhenLoggedOut($q, $injector) {
@@ -65,6 +65,12 @@
                     url: '/plantList',
                     templateUrl: '../views/plantListView.html',
                     controller: 'PlantListController as plantList'
+                })
+                .state('qrCode', {
+                    url: '/qrCode',
+                    templateUrl: '../views/qrCodeView.html',
+                    controller: 'QrCodeController as qr',
+                    params: {plantId: null}
                 });
         })
         .run(function ($rootScope, $state, $auth, $http) {

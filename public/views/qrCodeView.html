@@ -1,0 +1,8 @@
+<div class="col-sm-12">
+    <p>Qr code : {{ qr.code }}</p>
+    <qrcode version="{{qr.qrVersion}}" error-correction-level="{{qr.errorCorrectionLevel}}" size="{{qr.qrSize}}"
+            data="{{qr.bar}}"></qrcode>
+</div>
+<div class="col-sm-12">
+    <button class="btn btn-default" ng-click="qr.goToPlantList()">Ga terug</button>
+</div>

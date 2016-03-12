@@ -32,12 +32,16 @@
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="node_modules/satellizer/satellizer.js"></script>
 <script src="node_modules/angular-utils-pagination/dirPagination.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/qrcode_UTF8.js"></script>
+<script src="js/angular-qrcode.js"></script>
 
 <!-- Application Scripts -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controller/authController.js"></script>
 <script src="scripts/controller/plantListController.js"></script>
 <script src="scripts/controller/headerController.js"></script>
+<script src="scripts/controller/qrCodeController.js"></script>
 <script src="scripts/service/authService.js"></script>
 <script src="scripts/service/dataService.js"></script>
 </html>
