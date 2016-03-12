@@ -83,7 +83,8 @@
                 .state('form', {
                     url: '/form',
                     templateUrl: '../views/form.html',
-                    controller: 'FormController as vm'
+                    controller: 'FormController as vm',
+                    controllerAs: 'parrentController'
                 })
                 .state('form.plantInfo', {
                     url: '/plantInfo',
@@ -92,6 +93,11 @@
                 .state('form.plantCategory', {
                     url: '/plantCategory',
                     templateUrl: '../views/form_plantCategory.html'
+                })
+                .state('form.plantCultivars', {
+                    url: '/plantCultivars',
+                    templateUrl: '../views/form_plantCultivars.html',
+                    controller: 'CultivarsController as cv'
                 });
 
         })

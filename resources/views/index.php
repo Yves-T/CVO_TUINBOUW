@@ -55,6 +55,7 @@
 <script src="scripts/controller/headerController.js"></script>
 <script src="scripts/controller/qrCodeController.js"></script>
 <script src="scripts/controller/formController.js"></script>
+<script src="scripts/controller/cultivarsController.js"></script>
 <script src="scripts/service/authService.js"></script>
 <script src="scripts/service/dataService.js"></script>
 <script src="scripts/directives/confirmDirective.js"></script>
