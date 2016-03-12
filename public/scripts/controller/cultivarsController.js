@@ -25,5 +25,17 @@
             vm.examples.splice(index, 1);
             $scope.parrentController.formData.cultivarExamples = vm.examples;
         };
+
+        vm.nextPage = function () {
+            if ($scope.plantForm.$valid) {
+                $state.go('form.plantInfo', {});
+            }
+        };
+
+        vm.prevPage = function () {
+            if ($scope.plantForm.$valid) {
+                $state.go('form.plantCategory', {});
+            }
+        };
     }
 })();
