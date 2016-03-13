@@ -115,6 +115,11 @@
                     url: '/plantHarvest',
                     templateUrl: '../views/form_plantHarvest.html',
                     controller: 'HarvestController as phc'
+                })
+                .state('form.plantMedical', {
+                    url: '/plantMedical',
+                    templateUrl: '../views/form_plantMedical.html',
+                    controller: 'MedicalController as pmc'
                 });
 
         })

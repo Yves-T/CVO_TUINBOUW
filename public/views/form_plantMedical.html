@@ -1,0 +1,61 @@
+<!-- form-plantMedical.html -->
+
+<div class="form-group">
+    <label for="medicalContent">Medische grondstof</label>
+    <input novalidate type="text" class="form-control" id="medicalContent" name="medicalContent"
+           ng-model="pmc.medicalContent">
+</div>
+<button class="btn btn-success" ng-click="pmc.addContent()">Voeg toe</button>
+
+<div ng-show="pmc.showContents()">
+<hr>
+
+<ul >
+    <li ng-repeat="content in pmc.medicalContents track by $index">
+        {{content}}
+        <span ng-click="pmc.deleteContent($index)"><i class="fa fa-trash"></i></span>
+    </li>
+</ul>
+</div>
+<hr>
+
+<div class="form-group">
+    <label>Eigenschappen</label>
+    <div text-angular ng-model="hc.formData.medicalProperties" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Gebruik</label>
+    <div text-angular ng-model="hc.formData.medicalUsage" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Waarschuwingen en bijwerkingen</label>
+    <div text-angular ng-model="hc.formData.medicalWarnings" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Cosmetisch gebruik</label>
+    <div text-angular ng-model="hc.formData.medicalCosmetic" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6">
+        <a ng-disabled="plantForm.$invalid" ng-click="pmc.prevPage()" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Teelt &amp; oogst
+        </a>
+    </div>
+    <div class="col-xs-6">
+        <a ng-disabled="plantForm.$invalid" ng-click="pmc.nextPage()" class="btn btn-block btn-info">
+            Recepten <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
