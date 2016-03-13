@@ -15,7 +15,7 @@ angular
             $rootScope.refreshHandler = setInterval(refreshToken, 30 * 60 * 1000);
         };
 
-        var isAuthenticated = function (success, error) {
+        var isAuthenticated = function () {
             return $auth.isAuthenticated();
         };
 
