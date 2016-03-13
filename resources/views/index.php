@@ -33,6 +33,7 @@
 </body>
 
 <!-- Application Dependencies -->
+<script src="node_modules/jspdf/dist/jspdf.min.js"></script>
 <script src="node_modules/lodash/lodash.min.js"></script>
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular/angular.js"></script>
