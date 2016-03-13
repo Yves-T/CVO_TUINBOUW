@@ -7,7 +7,7 @@
         .controller('HeaderController', HeaderController);
 
 
-    function HeaderController($state, $location, Auth) {
+    function HeaderController($state, $location, Auth, $rootScope) {
 
         var vm = this;
 
@@ -16,6 +16,10 @@
         };
 
         vm.logout = function () {
+            if ($rootScope.refreshHandler) {
+                window.clearInterval($rootScope.refreshHandler);
+            }
+
             Auth.logout(function () {
                 $state.go('auth', {});
             });

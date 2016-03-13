@@ -6,6 +6,10 @@ angular
             $http.get('api/authenticate/user').success(success).error(error);
         };
 
+        var refreshToken = function (success, error) {
+            $http.get('api/authenticate/refresh').success(success).error(error);
+        };
+
         var getPlants = function (success, error) {
             $http.get('http://tuinbouw.app/api/plant').success(success).error(error);
         };
@@ -17,7 +21,8 @@ angular
         return {
             getAuthenticatedUser: getAuthenticatedUser,
             getPlants: getPlants,
-            deletePlant: deletePlant
+            deletePlant: deletePlant,
+            refreshToken: refreshToken
         };
 
     }]);

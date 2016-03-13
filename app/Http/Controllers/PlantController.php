@@ -13,13 +13,7 @@ class PlantController extends Controller
 
     public function __construct()
     {
-        $this->middleware('jwt.refresh', ['only' => [
-            'index'
-        ]]);
-
-        $this->middleware('jwt.auth', ['except' => [
-            'index'
-        ]]);
+        $this->middleware('jwt.auth');
     }
 
     public function index()

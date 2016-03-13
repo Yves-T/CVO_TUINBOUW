@@ -14,8 +14,15 @@ class AuthenticateController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('jwt.auth', ['except' => ['authenticate']]);
+        $this->middleware('jwt.refresh', ['only' => [
+            'refreshToken'
+        ]]);
+
+        $this->middleware('jwt.auth', ['except' => ['authenticate', 'refreshToken']]);
+
     }
+
+
 
     public function index()
     {
@@ -65,6 +72,12 @@ class AuthenticateController extends Controller
 
         // the token is valid and we have found the user via the sub claim
         return response()->json(compact('user'));
+    }
+
+    public function refreshToken()
+    {
+        $ok = "token refreshed";
+        return response()->json(compact('ok'));
     }
 
 }
