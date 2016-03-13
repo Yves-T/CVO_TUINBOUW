@@ -40,7 +40,8 @@
             <input novalidate type="text" class="form-control" id="recipeIngredient" name="recipeIngredient"
                    ng-model="rpc.recipeIngredient">
             <span class="input-group-btn">
-                <button class="btn btn-success" ng-click="rpc.addIngredient($event)">Voeg ingredi&euml;nt toe</button>
+                <button ng-disabled="rpc.didableIngredientBtn" class="btn btn-success"
+                        ng-click="rpc.addIngredient($event)">Voeg ingredi&euml;nt toe</button>
             </span>
         </div>
 

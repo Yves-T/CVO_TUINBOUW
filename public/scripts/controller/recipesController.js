@@ -133,6 +133,16 @@
             vm.ingredients.splice(index, 1);
         };
 
+        vm.didableIngredientBtn = true;
+
+        $scope.$watch('rpc.recipeIngredient', function () {
+            if (vm.recipeIngredient) {
+                vm.didableIngredientBtn = vm.recipeIngredient.length === 0;
+            } else {
+                vm.didableIngredientBtn = true;
+            }
+        }, true);
+
         vm.nextPage = function () {
             if ($scope.plantForm.$valid && !vm.navButtonsDisabled) {
                 $state.go('form.flowerArrangements', {});
