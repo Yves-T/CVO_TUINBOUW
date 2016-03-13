@@ -6,15 +6,8 @@
         .module('tuinbouwApp')
         .controller('AuthController', AuthController);
 
-    function AuthController($auth, $state, $http, $rootScope, Data) {
+    function AuthController($auth, $state, $rootScope, Data, Auth) {
 
-        function refreshToken() {
-            Data.refreshToken(function () {
-                console.log('token refreshed');
-            }, function (error) {
-                console.log(error);
-            });
-        }
 
         var vm = this;
 
@@ -41,7 +34,7 @@
                     $rootScope.currentUser = response.user;
 
                     // refresh with 30 min interval
-                    $rootScope.refreshHandler = setInterval(refreshToken, 30 * 60 * 1000);
+                    Auth.startRefreshToken();
 
                     $state.go('plantList');
                 }, function (err) {

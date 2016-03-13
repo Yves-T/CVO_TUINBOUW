@@ -1,6 +1,19 @@
 angular
     .module('tuinbouwApp')
-    .service('Auth', ['$auth', '$window', '$rootScope', function ($auth, $window, $rootScope) {
+    .service('Auth', ['$auth', '$window', '$rootScope', 'Data', function ($auth, $window, $rootScope, Data) {
+
+        function refreshToken() {
+            Data.refreshToken(function () {
+                console.log('token refreshed');
+            }, function (error) {
+                console.log(error);
+            });
+        }
+
+        var startRefreshToken = function () {
+            // refresh with 30 min interval
+            $rootScope.refreshHandler = setInterval(refreshToken, 30 * 60 * 1000);
+        };
 
         var isAuthenticated = function (success, error) {
             return $auth.isAuthenticated();
@@ -28,6 +41,7 @@ angular
         };
 
         return {
+            startRefreshToken: startRefreshToken,
             isAuthenticated: isAuthenticated,
             clearAuthenticated: clearAuthenticated,
             logout: logOut,

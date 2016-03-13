@@ -103,7 +103,7 @@
                 });
 
         })
-        .run(function ($rootScope, $state, $auth, $http) {
+        .run(function ($rootScope, $state, $auth, $http, Auth) {
 
 
             $rootScope.$on('$stateChangeStart', function (event, toState) {
@@ -118,6 +118,8 @@
                     if (toState.name === "auth") {
 
                         event.preventDefault();
+
+                        Auth.startRefreshToken();
 
                         $state.go('plantList');
                     }
