@@ -131,6 +131,16 @@
             vm.requirements.splice(index, 1);
         };
 
+        vm.didableRequirementBtn = true;
+
+        $scope.$watch('afc.projectRequirement', function () {
+            if (vm.projectRequirement) {
+                vm.didableRequirementBtn = vm.projectRequirement.length === 0;
+            } else {
+                vm.didableRequirementBtn = true;
+            }
+        }, true);
+
         vm.nextPage = function () {
             if ($scope.plantForm.$valid && !vm.navButtonsDisabled) {
                 $state.go('form.plantCultivars', {});

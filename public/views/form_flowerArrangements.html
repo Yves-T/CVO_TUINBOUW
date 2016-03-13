@@ -42,7 +42,8 @@
             <input novalidate type="text" class="form-control" id="projectRequirement" name="projectRequirement"
                    ng-model="afc.projectRequirement">
             <span class="input-group-btn">
-                <button class="btn btn-success" ng-click="afc.addRequirement($event)">Voeg materiaal toe</button>
+                <button ng-disabled="afc.didableRequirementBtn" class="btn btn-success"
+                        ng-click="afc.addRequirement($event)">Voeg materiaal toe</button>
             </span>
         </div>
 
