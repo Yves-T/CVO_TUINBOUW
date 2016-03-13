@@ -67,6 +67,7 @@
             vm.recipes.splice(index, 1);
             vm.navButtonsDisabled = vm.recipes.length === 0;
             $scope.parrentController.formData.recipes = vm.recipes;
+            vm.tableVissible = vm.recipes.length;
         };
 
         vm.proccessRecipe = function (event) {
