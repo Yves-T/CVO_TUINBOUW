@@ -5,7 +5,7 @@
     <input novalidate type="text" class="form-control" id="medicalContent" name="medicalContent"
            ng-model="pmc.medicalContent">
 </div>
-<button class="btn btn-success" ng-click="pmc.addContent()">Voeg toe</button>
+<button class="btn btn-success" ng-click="pmc.addContent($event)">Voeg toe</button>
 
 <div ng-show="pmc.showContents()">
 <hr>
@@ -13,7 +13,7 @@
 <ul >
     <li ng-repeat="content in pmc.medicalContents track by $index">
         {{content}}
-        <span ng-click="pmc.deleteContent($index)"><i class="fa fa-trash"></i></span>
+        <span ng-click="pmc.deleteContent($index, $event)"><i class="fa fa-trash"></i></span>
     </li>
 </ul>
 </div>

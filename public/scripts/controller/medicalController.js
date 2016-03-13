@@ -19,13 +19,15 @@
             vm.medicalContents = [];
         }
 
-        vm.addContent = function () {
+        vm.addContent = function ($event) {
+            $event.preventDefault();
             vm.medicalContents.push(vm.medicalContent);
             $scope.parrentController.formData.medicalContent = vm.medicalContents;
             vm.medicalContent = "";
         };
 
-        vm.deleteContent = function (index) {
+        vm.deleteContent = function (index, $event) {
+            $event.preventDefault();
             vm.medicalContents.splice(index, 1);
             $scope.parrentController.formData.medicalContent = vm.medicalContents;
         };
