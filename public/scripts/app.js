@@ -105,6 +105,11 @@
                     url: '/plantHistory',
                     templateUrl: '../views/form_plantHistory.html',
                     controller: 'HistoryController as hc'
+                })
+                .state('form.plantMaintenance', {
+                    url: '/plantMaintenance',
+                    templateUrl: '../views/form_plantMaintenance.html',
+                    controller: 'MaintenanceController as mc'
                 });
 
         })

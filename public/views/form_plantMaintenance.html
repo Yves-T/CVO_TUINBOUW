@@ -1,0 +1,20 @@
+<!-- form-plantMaintenance.html -->
+<div class="form-group">
+    <label>Onderhoud</label>
+    <div text-angular ng-model="hc.formData.maintenancePlant" required
+         ta-toolbar="[['h1','h2','h3'],['bold','italics'],['undo','redo'],['ul','ol'],['justifyLeft','justifyCenter','justifyRight']]">
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6">
+        <a ng-disabled="plantForm.$invalid" ng-click="mc.prevPage()" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Geschiedenis
+        </a>
+    </div>
+    <div class="col-xs-6">
+        <a ng-disabled="plantForm.$invalid" ng-click="mc.nextPage()" class="btn btn-block btn-info">
+            Teelt en oogst <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
