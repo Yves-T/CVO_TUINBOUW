@@ -13,7 +13,11 @@
         vm.loginError = false;
         vm.loginErrorText;
 
-        vm.medicalContents = [];
+        if ($scope.parrentController.formData.medicalContent) {
+            vm.medicalContents = $scope.parrentController.formData.medicalContent;
+        } else {
+            vm.medicalContents = [];
+        }
 
         vm.addContent = function () {
             vm.medicalContents.push(vm.medicalContent);
