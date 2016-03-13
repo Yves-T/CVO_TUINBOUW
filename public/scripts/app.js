@@ -120,6 +120,11 @@
                     url: '/plantMedical',
                     templateUrl: '../views/form_plantMedical.html',
                     controller: 'MedicalController as pmc'
+                })
+                .state('form.plantRecipes', {
+                    url: '/plantRecipes',
+                    templateUrl: '../views/form_plantRecipes.html',
+                    controller: 'RecipesController as rpc'
                 });
 
         })

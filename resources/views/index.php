@@ -62,6 +62,7 @@
 <script src="scripts/controller/maintenanceController.js"></script>
 <script src="scripts/controller/harvestController.js"></script>
 <script src="scripts/controller/medicalController.js"></script>
+<script src="scripts/controller/recipesController.js"></script>
 <script src="scripts/service/authService.js"></script>
 <script src="scripts/service/dataService.js"></script>
 <script src="scripts/directives/confirmDirective.js"></script>
