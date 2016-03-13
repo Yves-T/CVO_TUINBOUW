@@ -125,6 +125,7 @@
             event.preventDefault();
             vm.ingredients.push(vm.recipeIngredient);
             vm.ingredientsVissible = vm.ingredients.length;
+            vm.recipeIngredient = "";
         };
 
         vm.deleteIngredient = function (index, event) {
