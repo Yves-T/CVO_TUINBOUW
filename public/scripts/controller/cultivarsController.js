@@ -19,13 +19,15 @@
             vm.examples = [];
         }
 
-        vm.addExample = function () {
+        vm.addExample = function ($event) {
+            $event.preventDefault();
             vm.examples.push(vm.cultivarsExample);
             $scope.parrentController.formData.cultivarExamples = vm.examples;
             vm.cultivarsExample = "";
         };
 
-        vm.deleteExample = function (index) {
+        vm.deleteExample = function (index, $event) {
+            $event.preventDefault();
             vm.examples.splice(index, 1);
             $scope.parrentController.formData.cultivarExamples = vm.examples;
         };

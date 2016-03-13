@@ -11,14 +11,14 @@
     <input novalidate type="text" class="form-control" id="cultivarsExample" name="cultivarsExample"
            ng-model="cv.cultivarsExample">
 </div>
-<button class="btn btn-success" ng-click="cv.addExample()">Voeg toe</button>
+<button class="btn btn-success" ng-click="cv.addExample($event)">Voeg toe</button>
 
 <hr>
 
 <ul>
     <li ng-repeat="example in cv.examples track by $index">
         {{example}}
-        <span ng-click="cv.deleteExample($index)"><i class="fa fa-trash"></i></span>
+        <span ng-click="cv.deleteExample($index, $event)"><i class="fa fa-trash"></i></span>
     </li>
 </ul>
 
