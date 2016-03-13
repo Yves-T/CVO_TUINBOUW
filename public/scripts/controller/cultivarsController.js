@@ -28,7 +28,7 @@
 
         vm.nextPage = function () {
             if ($scope.plantForm.$valid) {
-                $state.go('form.plantInfo', {});
+                $state.go('form.plantHistory', {});
             }
         };
 

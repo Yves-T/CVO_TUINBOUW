@@ -100,6 +100,11 @@
                     url: '/plantCultivars',
                     templateUrl: '../views/form_plantCultivars.html',
                     controller: 'CultivarsController as cv'
+                })
+                .state('form.plantHistory', {
+                    url: '/plantHistory',
+                    templateUrl: '../views/form_plantHistory.html',
+                    controller: 'HistoryController as hc'
                 });
 
         })
