@@ -4,9 +4,9 @@
 
     angular
         .module('tuinbouwApp')
-        .controller('MaintenanceController', MaintenanceController);
+        .controller('HarvestController', harvestController);
 
-    function MaintenanceController($state, $scope) {
+    function harvestController($state, $scope) {
 
         var vm = this;
 
@@ -15,13 +15,13 @@
 
         vm.nextPage = function () {
             if ($scope.plantForm.$valid) {
-                $state.go('form.plantHarvest', {});
+                $state.go('form.plantCultivars', {});
             }
         };
 
         vm.prevPage = function () {
             if ($scope.plantForm.$valid) {
-                $state.go('form.plantHistory', {});
+                $state.go('form.plantMaintenance', {});
             }
         };
 

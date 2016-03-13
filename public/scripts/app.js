@@ -110,6 +110,11 @@
                     url: '/plantMaintenance',
                     templateUrl: '../views/form_plantMaintenance.html',
                     controller: 'MaintenanceController as mc'
+                })
+                .state('form.plantHarvest', {
+                    url: '/plantHarvest',
+                    templateUrl: '../views/form_plantHarvest.html',
+                    controller: 'HarvestController as phc'
                 });
 
         })
