@@ -125,6 +125,11 @@
                     url: '/plantRecipes',
                     templateUrl: '../views/form_plantRecipes.html',
                     controller: 'RecipesController as rpc'
+                })
+                .state('form.flowerArrangements', {
+                    url: '/flowerArrangements',
+                    templateUrl: '../views/form_flowerArrangements.html',
+                    controller: 'ArrangementsController as afc'
                 });
 
         })

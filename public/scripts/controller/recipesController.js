@@ -135,7 +135,7 @@
 
         vm.nextPage = function () {
             if ($scope.plantForm.$valid && !vm.navButtonsDisabled) {
-                $state.go('form.plantCultivars', {});
+                $state.go('form.flowerArrangements', {});
             }
         };
 
