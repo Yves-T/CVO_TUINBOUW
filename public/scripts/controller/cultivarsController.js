@@ -13,7 +13,11 @@
         vm.loginError = false;
         vm.loginErrorText;
 
-        vm.examples = [];
+        if ($scope.parrentController.formData.cultivarExamples) {
+            vm.examples = $scope.parrentController.formData.cultivarExamples;
+        } else {
+            vm.examples = [];
+        }
 
         vm.addExample = function () {
             vm.examples.push(vm.cultivarsExample);
