@@ -149,7 +149,7 @@
 
         vm.prevPage = function () {
             if ($scope.plantForm.$valid && !vm.navButtonsDisabled) {
-                $state.go('form.plantMedical', {});
+                $state.go('form.plantRecipes', {});
             }
         };
     }
