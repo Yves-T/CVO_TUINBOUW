@@ -36,6 +36,16 @@
             return vm.medicalContents.length > 0;
         };
 
+        vm.disableContentBtn = true;
+
+        $scope.$watch('pmc.medicalContent', function () {
+            if (vm.medicalContent) {
+                vm.disableContentBtn = vm.medicalContent.length === 0;
+            } else {
+                vm.disableContentBtn = true;
+            }
+        }, true);
+
         vm.nextPage = function () {
             if ($scope.plantForm.$valid) {
                 $state.go('form.plantRecipes', {});

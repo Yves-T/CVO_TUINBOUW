@@ -1,11 +1,14 @@
 <!-- form-plantMedical.html -->
 
-<div class="form-group">
-    <label for="medicalContent">Medische grondstof</label>
+<div class="input-group">
     <input novalidate type="text" class="form-control" id="medicalContent" name="medicalContent"
            ng-model="pmc.medicalContent">
+            <span class="input-group-btn">
+                <button ng-disabled="cv.disableContentBtn" class="btn btn-success"
+                        ng-click="pmc.addContent($event)">Voeg toe
+                </button>
+            </span>
 </div>
-<button class="btn btn-success" ng-click="pmc.addContent($event)">Voeg toe</button>
 
 <div ng-show="pmc.showContents()">
 <hr>
