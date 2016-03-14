@@ -32,6 +32,16 @@
             $scope.parrentController.formData.cultivarExamples = vm.examples;
         };
 
+        vm.didableExampleBtn = true;
+
+        $scope.$watch('cv.cultivarsExample', function () {
+            if (vm.cultivarsExample) {
+                vm.didableExampleBtn = vm.cultivarsExample.length === 0;
+            } else {
+                vm.didableExampleBtn = true;
+            }
+        }, true);
+
         vm.nextPage = function () {
             if ($scope.plantForm.$valid) {
                 $state.go('form.plantHistory', {});
