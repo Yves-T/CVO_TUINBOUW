@@ -40,11 +40,16 @@
         </tr>
         </tbody>
     </table>
-    <dir-pagination-controls
-            max-size="5"
-            direction-links="true"
-            boundary-links="true">
-    </dir-pagination-controls>
+        <div class="row">
+            <div class="col-lg-12">
+                <dir-pagination-controls
+                        max-size="5"
+                        direction-links="true"
+                        boundary-links="true">
+                </dir-pagination-controls>
+            </div>
+        </div>
+
         <button ng-click="plantList.addPlant()" class="btn btn-success">Plant toevoegen</button>
     </div>
     <div ng-hide="plantList.showTable()">
