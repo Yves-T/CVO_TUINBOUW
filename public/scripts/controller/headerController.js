@@ -7,16 +7,11 @@
         .controller('HeaderController', HeaderController);
 
 
-    function HeaderController($state, $location, Auth, Data, $rootScope) {
+    function HeaderController($state, $location, Auth, $rootScope) {
 
         var vm = this;
 
         if (!$rootScope.refreshHandler && Auth.isAuthenticated()) {
-            Data.refreshToken(function (succes) {
-                console.log('refreshed token');
-            }, function (error) {
-                console.log('refresh token failed');
-            });
             Auth.startRefreshToken();
         }
 
