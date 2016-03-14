@@ -27,6 +27,7 @@
         vm.processForm = function () {
             Data.createPlant(vm.formData, function (result) {
                 console.log(result);
+                $state.go('qrCode', {"plantId": result});
             }, function (error) {
                 console.log(error);
             });
