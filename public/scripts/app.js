@@ -84,7 +84,8 @@
                     url: '/form',
                     templateUrl: '../views/form.html',
                     controller: 'FormController as vm',
-                    controllerAs: 'parrentController'
+                    controllerAs: 'parrentController',
+                    params: {plantId: null}
                 })
                 .state('form.plantInfo', {
                     url: '/plantInfo',

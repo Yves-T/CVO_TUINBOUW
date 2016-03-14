@@ -26,6 +26,9 @@
                 </span>
             </th>
             <th>
+                Aanpassen
+            </th>
+            <th>
                 Verwijderen
             </th>
         </tr>
@@ -35,6 +38,8 @@
         | itemsPerPage:5">
             <td>{{plant.id}}</td>
             <td><a href="javascript:;" ng-click="plantList.showQrCode(plant.id)">{{plant.plant_information.title}}</a></td>
+            <td><button class="btn btn-success"
+                        ng-click="plantList.updatePlant(plant.id)">Aanpassen</button></td>
             <td><button class="btn btn-danger" confirm="Plant verwijderen? Ben je zeker ?"
                         ng-click="plantList.deletePlant(plant.id)">Verwijderen</button></td>
         </tr>

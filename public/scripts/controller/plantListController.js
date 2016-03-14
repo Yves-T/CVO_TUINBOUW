@@ -46,6 +46,10 @@
             $state.go('form.plantInfo', {});
         };
 
+        vm.updatePlant = function (plantId) {
+            $state.go('form.plantInfo', {"plantId": plantId});
+        };
+
         vm.deletePlant = function (plantId) {
             Data.deletePlant(plantId, function (plantId) {
                 console.log(plantId);

@@ -14,6 +14,14 @@ angular
             $http.get('http://tuinbouw.app/api/plant').success(success).error(error);
         };
 
+        var getPlantById = function (id, success, error) {
+            $http.get('http://tuinbouw.app/api/plant/' + id).success(success).error(error);
+        };
+
+        var updatePlant = function (id, formData, success, error) {
+            $http.put('http://tuinbouw.app/api/plant/' + id, formData).success(success).error(error);
+        };
+
         var deletePlant = function (plantId, success, error) {
             $http.delete('http://tuinbouw.app/api/plant/' + plantId).success(success).error(error);
         };
@@ -25,6 +33,8 @@ angular
         return {
             getAuthenticatedUser: getAuthenticatedUser,
             getPlants: getPlants,
+            getPlantById: getPlantById,
+            updatePlant: updatePlant,
             deletePlant: deletePlant,
             createPlant: createPlant,
             refreshToken: refreshToken
