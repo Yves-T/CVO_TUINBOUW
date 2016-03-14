@@ -23,7 +23,8 @@
         $rootScope.currentUser = Auth.currentUserName();
 
         vm.formData = {};
-        if ($stateParams.plantId) {
+        vm.isUpdating = $stateParams.plantId;
+        if (vm.isUpdating) {
             // update plant
             Data.getPlantById($stateParams.plantId, function (plant) {
                 remapFormData(plant);
@@ -33,7 +34,7 @@
         }
 
         vm.processForm = function () {
-            if ($stateParams.plantId) {
+            if (vm.isUpdating) {
                 handleUpdatePlant();
             } else {
                 handleCreatePlant();

@@ -84,7 +84,10 @@
             <span class="glyphicon glyphicon-circle-arrow-left"></span> Recepten
         </a>
     </div>
-    <div class="col-xs-6">
+    <div ng-hide="vm.isUpdating" class="col-xs-6">
         <button type="submit" class="btn btn-danger">Versturen en QR code aanmaken</button>
+    </div>
+    <div ng-show="vm.isUpdating" class="col-xs-6">
+        <button type="submit" class="btn btn-danger">Updaten</button>
     </div>
 </div>
