@@ -72,7 +72,8 @@
                 .state('plantList', {
                     url: '/plantList',
                     templateUrl: '../views/plantListView.html',
-                    controller: 'PlantListController as plantList'
+                    controller: 'PlantListController as plantList',
+                    params: {message: null}
                 })
                 .state('qrCode', {
                     url: '/qrCode',

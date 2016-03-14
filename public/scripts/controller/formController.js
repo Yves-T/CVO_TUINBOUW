@@ -43,7 +43,7 @@
 
         function handleUpdatePlant() {
             Data.updatePlant($stateParams.plantId, vm.formData, function (result) {
-                console.log(result);
+                $state.go('plantList', {'message' : "Plant is aangepast"});
             }, function (error) {
                 console.log(error);
             });
@@ -51,7 +51,6 @@
 
         function handleCreatePlant() {
             Data.createPlant(vm.formData, function (result) {
-
                 $state.go('qrCode', {"plantId": result});
             }, function (error) {
                 console.log(error);

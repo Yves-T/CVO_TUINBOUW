@@ -6,7 +6,7 @@
         .module('tuinbouwApp')
         .controller('PlantListController', PlantListController);
 
-    function PlantListController($state, Auth, Data, $rootScope) {
+    function PlantListController($state, Auth, Data, $rootScope, $stateParams) {
 
         // if the user is not logged in, throw them back to the login page
         if (!Auth.isAuthenticated()) {
@@ -17,6 +17,7 @@
         var vm = this;
         vm.sortKey = 'plant.id';
         vm.plants = [];
+        vm.message = $stateParams.message;
 
         $rootScope.currentUser = Auth.currentUserName();
 
