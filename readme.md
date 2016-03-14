@@ -47,3 +47,69 @@ Example response
   }
 ]
 ```
+
+#### Create plant
+
+url = api/plant
+method = POST
+
+Example post body
+
+```json
+{
+  "projects": [
+    {
+      "name": "ssdfsdf",
+      "steps": "<p>sfsdfdf</p>",
+      "requirements": [
+        "sdfsdfsdf"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "name": "sdfsdfsdf",
+      "steps": "<p>sdsdfsdf</p>",
+      "ingredients": [
+        "sdfsdf"
+      ]
+    }
+  ],
+  "medicalContent": [
+    "sddfssdfdf"
+  ],
+  "medicalProperties": "<p>dsfsdf</p>",
+  "medicalUsage": "<p>sffddsfsddf</p>",
+  "medicalWarnings": "<p>sdfasfadf</p>",
+  "medicalCosmetic": "<p>sdffsdfdfdsf</p>",
+  "harvestPlant": "<p>fdfdfdsf</p>",
+  "maintenancePlant": "<p>sdfsdfasdfsdf</p>",
+  "historyPlant": "<p>fsdfdfddf</p>",
+  "cultivarsInfo": "<p>sdfsdfdsfsdf</p>",
+  "cultivarExamples": [
+    "sdfsdfdsf",
+    "ssdfsdf"
+  ],
+  "catTitle": "sdfdsdf",
+  "catGebruik": "fdff",
+  "catHabitat": "dsfdf",
+  "catHeight": "dfsfdsf",
+  "catFlowerColor": "sfdsdf",
+  "catBlloomTime": "fddsf",
+  "catFlowers": "fdsfdf",
+  "catLeafColors": "fadsasdf",
+  "catLeafs": "dfasdfadsf",
+  "catLeafDetail": "adfasdfaf",
+  "catLeafShadow": "sfsdfsdf",
+  "catHumidity": "dsfsdf",
+  "catPh": "dfsdf",
+  "catEvergreen": "dsfdsf",
+  "catDensity": "fsdfdfsdfdsf",
+  "infoTitle": "sdfdsfsadf",
+  "infoPlant": "<p>dsafasdfdf</p>",
+  "infoFamily": "dfsdfasdf",
+  "infoGenus": "sddfdf"
+}
+```
+
+Response : plant id that is created
