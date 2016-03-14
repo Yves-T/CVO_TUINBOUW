@@ -49,7 +49,7 @@ class PlantController extends Controller
         // information
         $plantInformation = new PlantInformation();
         $plantInformation->title = $request->infoTitle;
-        $plantInformation->title = $request->infoPlant;
+        $plantInformation->info = $request->infoPlant;
         $plantInformation->family = $request->infoFamily;
         $plantInformation->genus = $request->infoGenus;
         $plantInformation->plant()->associate($plant);
