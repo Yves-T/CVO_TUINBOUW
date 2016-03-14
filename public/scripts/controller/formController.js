@@ -25,9 +25,9 @@
         vm.formData = {};
 
         vm.processForm = function () {
-            $http.post('http://tuinbouw.app/api/plant', vm.formData).success(function (result) {
+            Data.createPlant(vm.formData, function (result) {
                 console.log(result);
-            }).error(function (error) {
+            }, function (error) {
                 console.log(error);
             });
         };

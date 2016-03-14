@@ -18,10 +18,15 @@ angular
             $http.delete('http://tuinbouw.app/api/plant/' + plantId).success(success).error(error);
         };
 
+        var createPlant = function (formData, success, error) {
+            $http.post('http://tuinbouw.app/api/plant', formData).success(success).error(error);
+        };
+
         return {
             getAuthenticatedUser: getAuthenticatedUser,
             getPlants: getPlants,
             deletePlant: deletePlant,
+            createPlant: createPlant,
             refreshToken: refreshToken
         };
 
