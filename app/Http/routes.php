@@ -26,4 +26,5 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('authenticate/refresh', 'AuthenticateController@refreshToken');
 
     Route::resource('plant', 'PlantController');
+    Route::resource('freePlant', 'FreePlantController');
 });
