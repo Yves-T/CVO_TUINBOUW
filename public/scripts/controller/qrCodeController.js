@@ -19,7 +19,7 @@
         // set up init variables
         var vm = this;
         vm.code = $stateParams.plantId;
-        vm.bar = 'http://www.google.be/' + vm.code;
+        vm.bar = 'http://37.139.23.228/freePlant/' + vm.code;
         vm.qrVersion = 4;
         vm.errorCorrectionLevel = 'M';
         vm.qrSize = 274;
